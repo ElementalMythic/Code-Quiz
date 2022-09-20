@@ -2,15 +2,42 @@
 //need to add a timer to this code
 //Need to tell this timer to start running otherwise it wil just start right away.
 //The "function" behind the set interval is the callback function
+var q1 = document.querySelector(".Q1")
+
+var q2 = document.querySelector(".Q2")
+
+var button = document.querySelector("#start");
+
+var secondsLeft = 5
+
+var timer = document.querySelector(".timer")
 
 
 
-var myCountdown = setInterval(function() {
-    secondsLeft--
-    console.log("You have " + secondsLeft + " seconds left " )
-    if (secondsLeft == 0) {
-        clearInterval(myCountdown) }
-}, 1000);
+
+button.addEventListener("click", function(event) {
+    event.preventDefault();
+    q1.style="display:block;" 
+    button.style="display:none;" 
+    var myCountdown = setInterval(function() {
+
+        secondsLeft--
+        timer.textContent="You have " + secondsLeft + " seconds left " 
+        console.log("You have " + secondsLeft + " seconds left " )
+    
+        if (secondsLeft == 0) {
+            clearInterval(myCountdown) }
+    }, 1000);
+    var q1Buttons = document.querySelectorAll(".q1Button")
+    for (var i = 0; i < q1Buttons.length; i++) {
+        q1Buttons[i].addEventListener("click", function(event) {
+            q2.style="display:block;" 
+            q1.style="display:none;" 
+        })
+    }
+} )
+
+// use javascript to hide questions, then when you click start quiz it remove the hide sytle
 
 // var myCountdown = setInterval(function() {
 // }, interval);
