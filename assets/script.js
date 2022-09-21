@@ -14,7 +14,6 @@ var timer = document.querySelector(".timer")
 
 
 
-
 button.addEventListener("click", function(event) {
     event.preventDefault();
     q1.style="display:block;" 
