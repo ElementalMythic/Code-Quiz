@@ -2,15 +2,21 @@
 //need to add a timer to this code
 //Need to tell this timer to start running otherwise it wil just start right away.
 //The "function" behind the set interval is the callback function
-var q1 = document.querySelector(".Q1")
+var q1 = document.querySelector(".Q1");
 
-var q2 = document.querySelector(".Q2")
+var q2 = document.querySelector(".Q2");
+
+var q3 = document.querySelector(".Q3");
+
+var q4 = document.querySelector(".Q4");
 
 var button = document.querySelector("#start");
 
-var secondsLeft = 6
+var secondsLeft = 11;
 
-var timer = document.querySelector(".timer")
+var timer = document.querySelector(".timer");
+
+
 
 
 
@@ -27,6 +33,7 @@ button.addEventListener("click", function(event) {
         if (secondsLeft == 0) {
             clearInterval(myCountdown) }
     }, 1000);
+    
     var q1Buttons = document.querySelectorAll(".q1Button")
     for (var i = 0; i < q1Buttons.length; i++) {
         q1Buttons[i].addEventListener("click", function(event) {
@@ -34,7 +41,33 @@ button.addEventListener("click", function(event) {
             q1.style="display:none;" 
         })
     }
+
+    // add score inside of the function???? 
+
+    var q2Buttons = document.querySelectorAll(".q2Button")
+    for (var i = 0; i < q2Buttons.length; i++) {
+        q2Buttons[i].addEventListener("click", function(event) {
+            q3.style="display:block;"
+            q2.style="display:none;"
+        })
+    }
+
+    var q3Buttons = document.querySelectorAll(".q3Button")
+    for (var i = 0; i < q3Buttons.length; i++) {
+        q3Buttons[i].addEventListener("click", function(event) {
+            q4.style="display:block;"
+            q3.style="display:none;"
+        })
+    }    
+
+    // need to make sure that the user can log thier data. 
+
 } )
+
+
+
+
+
 
 // use javascript to hide questions, then when you click start quiz it remove the hide sytle
 
