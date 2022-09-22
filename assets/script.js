@@ -8,7 +8,7 @@ var q2 = document.querySelector(".Q2")
 
 var button = document.querySelector("#start");
 
-var secondsLeft = 5
+var secondsLeft = 6
 
 var timer = document.querySelector(".timer")
 
