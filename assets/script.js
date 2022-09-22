@@ -16,9 +16,15 @@ var secondsLeft = 11;
 
 var timer = document.querySelector(".timer");
 
+var optionA = docuemnt.getElementById("A");
 
+var optionB = docuemnt.getElementById("B");
 
+var optionC = docuemnt.getElementById("C");
 
+var optionD = docuemnt.getElementById("D");
+
+// timer and questions
 
 button.addEventListener("click", function(event) {
     event.preventDefault();
@@ -63,6 +69,47 @@ button.addEventListener("click", function(event) {
     // need to make sure that the user can log thier data. 
 
 } )
+
+// need to make questions...
+
+let questions = [
+    {
+        question: "This is the first question",
+        optionA: "Correct",
+        optionB: "Incorrect",
+        optionC: "Incorrect",
+        optionD: "Incorrect",
+        correctOption: "A" 
+
+    }
+    ,
+    {
+        question: "This is the second question",
+        optionA: "Incorrect",
+        optionB: "Correct",
+        optionC: "Incorrect",
+        optionD: "Incorrect",
+        correctOption: "B"
+    }
+    ,
+    {
+        question: "This is the third question",
+        optionA: "Incorrect",
+        optionB: "Incorrect",
+        optionC: "Correct",
+        optionD: "Incorrect",
+        correctOption: "C'"
+    }
+    ,
+    {
+        question: "This is the fourth question",
+        optionA: "Incorrect",
+        optionB: "Incorrect",
+        optionC: "Incorrect",
+        optionD: "Correct",
+        correctOption: "D"
+    }
+];
 
 
 
