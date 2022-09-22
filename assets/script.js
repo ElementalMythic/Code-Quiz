@@ -12,7 +12,7 @@ var q4 = document.querySelector(".Q4");
 
 var button = document.querySelector("#start");
 
-var secondsLeft = 11;
+var secondsLeft = 11; 
 
 var timer = document.querySelector(".timer");
 
@@ -23,6 +23,80 @@ var optionB = docuemnt.getElementById("B");
 var optionC = docuemnt.getElementById("C");
 
 var optionD = docuemnt.getElementById("D");
+
+var questions = [
+    {
+        question: "This is the first question",
+        optionA: "Correct",
+        optionB: "Incorrect",
+        optionC: "Incorrect",
+        optionD: "Incorrect",
+        correctOption: "A" 
+
+    }
+    ,
+    {
+        question: "This is the second question",
+        optionA: "Incorrect",
+        optionB: "Correct",
+        optionC: "Incorrect",
+        optionD: "Incorrect",
+        correctOption: "B"
+    }
+    ,
+    {
+        question: "This is the third question",
+        optionA: "Incorrect",
+        optionB: "Incorrect",
+        optionC: "Correct",
+        optionD: "Incorrect",
+        correctOption: "C'"
+    }
+    ,
+    {
+        question: "This is the fourth question",
+        answers: [
+            "Answer 1",
+            "Answer 1",
+            "Answer 1",
+            "Answer 4",
+        ],
+        correctOption: 1
+    }
+];
+
+var questionIdx = 0;
+
+
+function startQuiz(){
+    // start timer 
+    // render the current question 
+}
+
+
+function displayQuestion(){
+    var currQuestion = questions[questionIdx]
+    // create the div 
+    // create the h3 
+    // create a ul tag 
+    // loop through the answwers:
+      // create a button that shows the answer
+      // if the idx value of the curr answer = the correectOpt, place a custom data attr on the button
+      
+    /*
+    <div class = Q1 style = "display: none">
+            <h3> Question 1 </h3>
+            <button class = "q1Button">answer 1</button>
+            <button class = "q1Button">answer 2</button>
+            <button class = "q1Button" id = "correct">answer 3</button>
+            <button class = "q1Button">answer 4</button>
+        </div>
+    */
+}
+
+
+
+
 
 // timer and questions
 
@@ -72,44 +146,7 @@ button.addEventListener("click", function(event) {
 
 // need to make questions...
 
-let questions = [
-    {
-        question: "This is the first question",
-        optionA: "Correct",
-        optionB: "Incorrect",
-        optionC: "Incorrect",
-        optionD: "Incorrect",
-        correctOption: "A" 
 
-    }
-    ,
-    {
-        question: "This is the second question",
-        optionA: "Incorrect",
-        optionB: "Correct",
-        optionC: "Incorrect",
-        optionD: "Incorrect",
-        correctOption: "B"
-    }
-    ,
-    {
-        question: "This is the third question",
-        optionA: "Incorrect",
-        optionB: "Incorrect",
-        optionC: "Correct",
-        optionD: "Incorrect",
-        correctOption: "C'"
-    }
-    ,
-    {
-        question: "This is the fourth question",
-        optionA: "Incorrect",
-        optionB: "Incorrect",
-        optionC: "Incorrect",
-        optionD: "Correct",
-        correctOption: "D"
-    }
-];
 
 
 
