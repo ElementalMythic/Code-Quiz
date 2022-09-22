@@ -79,10 +79,6 @@ button.addEventListener("click", function(event) {
 
 //need to link button
 
-function startMyApp(){
-
-}
-
 //var button = document.getElementById("click", function(e)) 
 
 //button.addEventListener("click", function()
@@ -99,36 +95,11 @@ var currentScore = 0
 
 var secondsReamining = 120
 
-function showAQuestion(){
-
-}
-
 // note: use console log 
 
 //figure out which item to get from the arrya each time... 
 // Need a something in our data to be able to say the correct answer...
 // Make this an array...
-
-var questions = [
-    {
-        question: "How is Gary such an amaizng teacher",
-            answers: [
-        "He really isnt",
-        "Why can't Katy teach the class?",
-        "Can we get our money back?",
-    ]
-    },
-    {
-    question: "What sound does a dog make?",
-    answers: [
-        "Moo",
-        "Bark",
-        "Meow",
-    ]
-}
-
-]
-
 //what happens when the user clicks on the button?: 
 //The Timer has to start and display the first question.
 //Need a fuction 
@@ -144,6 +115,8 @@ for (var i = 0; i < questions.length; i++) {
 
     // add all this stuff to the dom 
 }
+
+
 
 // seperate data from presentation. 
 // how do i start the application?
