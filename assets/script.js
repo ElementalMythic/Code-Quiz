@@ -5,6 +5,7 @@
 var currentScore = 0
 
 var secondsReamining = 120
+
 var q1 = document.querySelector(".Q1");
 
 var q2 = document.querySelector(".Q2");
@@ -38,22 +39,29 @@ var questions = [
         options: ["Option 1", "Option 2", "Option 3", "Option 4"],
         correctOption: "Option 4"
     },
+    {
+        question: "This is the third question",
+        options: ["Option 1", "Option 2", "Option 3"],
+        correctOption: "Option 3"
+    }
 ];
 
-var questionIdx = 0;
+var questionIdx = 0; 
 
 
 function startQuiz(event){
     event.preventDefault()
     console.log("Start Quiz")
     // start timer 
-
+    
     //hide the viewport
     var viewport = document.getElementById("viewport")
     viewport.classList.add("hide")
     displayQuestion()
 
 }
+
+
 
 startButton.addEventListener("click", startQuiz)
 function displayQuestion(){
@@ -74,10 +82,48 @@ function displayQuestion(){
     }
 }
 
+
+
+
+
+
 function checkAnswer(event){
     event.preventDefault()
     console.log("Trigerreddddddd")
+    console.log(event.target.innerHTML)
+    if(questions[questionIdx].correctOption !== event.target.innerHTML){
+        console.log("Wrong")
+        window.alert("Incorrect")
+    } else{
+        console.log("Correct")
+        window.alert("Correct!")
+    }
+    var isOver = checkIfOver()
+    if(!isOver){
+        questionIdx++
+        displayQuestion()
+    } else{
+        quizOver()
+    }
 }
+
+function quizOver(){
+    console.log("Quiz Over")
+    window.alert("Quiz Over")
+}
+
+function checkIfOver(){
+    // reach the last question
+    if (questionIdx == questions.length -1){
+        return true
+    } else{
+        return false
+    }
+}
+
+
+
+
     // create the div 
     // create the h3 
     // create a ul tag 
