@@ -16,7 +16,7 @@ var q4 = document.querySelector(".Q4");
 
 var startButton = document.querySelector("#start");
 
-var secondsLeft = 11; 
+var secondsLeft = 61; 
 
 var timer = document.querySelector(".timer");
 
@@ -47,6 +47,8 @@ var questions = [
 ];
 
 var questionIdx = 0; 
+
+
 
 
 function startQuiz(event){
@@ -82,8 +84,21 @@ function displayQuestion(){
     }
 }
 
+a
 
 
+var myCountdown = setInterval(function() {
+        
+           secondsLeft--
+            timer.textContent="You have " + secondsLeft + " seconds left " 
+            console.log("You have " + secondsLeft + " seconds left " )
+        
+          if (secondsLeft == 0) {
+                clearInterval(myCountdown);
+                window.alert ("Quiz Over");
+                location.reload(); 
+            }
+         }, 1000);
 
 
 
@@ -108,8 +123,9 @@ function checkAnswer(event){
 }
 
 function quizOver(){
-    console.log("Quiz Over")
-    window.alert("Quiz Over")
+    console.log("Quiz Over");
+    window.alert("Quiz Over");
+    location.reload();
 }
 
 function checkIfOver(){
