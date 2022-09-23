@@ -30,19 +30,19 @@ var optionD = document.getElementById("D");
 
 var questions = [
     {
-        question: "This is the first question",
-        options: ["Option 1", "Option 2", "Option 3"],
-        correctOption: "Option 1"
+        question: "What does HTML sand for?",
+        options: ["HyperText Markup Language", "Hyperspeed Test MateriaL", "High-Tech Machine Learning"],
+        correctOption: "HyperText Markup Language"
     },
     {
-        question: "This is the second question",
-        options: ["Option 1", "Option 2", "Option 3", "Option 4"],
-        correctOption: "Option 4"
+        question: "What does CSS do?",
+        options: ["Changes Fonts", "Adds Color", "Change Padding", "All Are True"],
+        correctOption: "All Are True"
     },
     {
-        question: "This is the third question",
-        options: ["Option 1", "Option 2", "Option 3"],
-        correctOption: "Option 3"
+        question: "Is coding hard?",
+        options: ["Maybe", "No", "Yes"],
+        correctOption: "Yes"
     }
 ];
 
